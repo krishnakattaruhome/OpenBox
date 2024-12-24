@@ -1,0 +1,12 @@
+
+# get a list of all keywords in python
+
+import keyword
+print(keyword.kwlist)
+print(len(keyword.kwlist))
+
+# get a list of all builtin functions in python
+
+print(dir(__builtins__))
+len(dir(__builtins__))
+
