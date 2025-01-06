@@ -1,0 +1,34 @@
+Arithmetic Operators:
+    + (Addition)
+    - (Subtraction)
+    * (Multiplication)
+    / (Division)
+    % (Modulo - returns the remainder)
+    // (Floor Division - returns the quotient)
+    ** (Exponentiation)
+Comparison Operators:
+    == (Equal to)
+    != (Not equal to)
+    > (Greater than)
+    < (Less than)
+    >= (Greater than or equal to)
+    <= (Less than or equal to)
+Assignment Operators:
+    = (Simple assignment)
+    += (Add and assign)
+    -= (Subtract and assign)
+    *= (Multiply and assign)
+    /= (Divide and assign)
+    %= (Modulo and assign)
+    //= (Floor divide and assign)
+    **= (Exponentiate and assign)
+Logical Operators:
+    and (Logical AND), or (Logical OR), and not (Logical NOT).
+Bitwise Operators:
+    & (Bitwise AND), | (Bitwise OR), ^ (Bitwise XOR), ~ (Bitwise NOT), << (Left shift), and >> (Right shift).
+Membership Operators:
+    in (Checks if an element is present in a sequence)
+    not in (Checks if an element is not present in a sequence)
+Identity Operators:
+    is (Checks if two objects are the same)
+    is not (Checks if two objects are not the same)
