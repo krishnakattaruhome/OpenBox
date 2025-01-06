@@ -1,0 +1,76 @@
+print
+Variables for Strings
+Variables for Numbers
+Math expressions: Familiar operators
+Variable Names Legal and Illegal
+Math expressions: Unfamiliar operators
+Math expressions: Eliminating ambiguity
+Concatenating text strings
+if statements
+    Comparison operators
+    else and elif statements
+    Testing sets of conditions
+    if statements nested
+Comments
+Lists
+    Lists: Adding and changing elements
+    Lists: Taking slices out of them
+    Lists: Deleting and removing elements
+    Lists: popping elements
+Tuples
+for loops
+    for loops nested
+Getting information from the user and converting strings and numbers
+Changing case
+Dictionaries
+    Dictionaries: What they are
+    Dictionaries: How to code one
+    Dictionaries: How to pick information out of them
+    Dictionaries: The versatility of keys and values
+    Dictionaries: Adding items
+    Dictionaries: Removing and changing items
+    Dictionaries: Looping through values
+    Dictionaries: Looping through keys
+    Dictionaries: Looping through key-value pairs
+    Creating a list of dictionaries
+    How to pick information out of a list of dictionaries
+    How to append a new dictionary to a list of dictionaries
+    Creating a dictionary that contains lists
+    How to get information out of a list within a dictionary
+    Creating a dictionary that contains a dictionary
+    How to get information out of a dictionary within another dictionary
+Functions
+    Functions: Passing them information
+    Functions: Passing information to them a different way
+    Functions: Assigning a default value to a parameter
+    Functions: Mixing positional and keyword arguments
+    Functions: Dealing with an unknown number of arguments
+    Functions: Passing information back from them
+    Using functions as variables (which is what they really are)
+    Functions: Local vs. global variables
+    Functions within functions
+While loops
+    While loops: Setting a flag
+Classes
+    Classes: Starting to build the structure
+    Classes: A bit of housekeeping
+    Classes: Creating an instance
+    Classes: A little more complexity
+    Classes: Getting info out of instances
+    Classes: Building functions into them
+    Classes: Coding a method
+    Classes: Changing an attribute's value
+Data files
+    Data files: Storing data
+    Data files: Retrieving data
+    Data files: Appending data
+Modules
+CSV files
+    CSV files: Reading them
+    CSV files: Picking information out of them
+    CSV files: Loading information into them. Part 1
+    CSV files: Loading information into them. Part 2
+    CSV files: Loading information into them. Part 3
+    CSV files: Appending rows to them.
+How to save a Python list or dictionary in a file: JSON
+How to retrieve a Python list or dictionary from a JSON file
