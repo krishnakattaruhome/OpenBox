@@ -1,0 +1,37 @@
+Common Libraries:
+Pandas - Data Analysis and Manipulation
+Numpy - Mathematical Functions and Numerical Computing
+Matplotlib/Seaborn - Data Visualization
+Scikit-learn - Machine Learning
+TensorFlow/PyTorch - Deep Learning
+SQLAlchemy - Database Interaction
+Flask/Django - Web Development
+BeautifulSoup/Scrapy - Web Scraping
+OpenCV - Computer Vision
+NLTK/spaCy - Natural Language Processing
+PySpark - Big Data processing
+FastAPI - API Development
+Keras - Nural Network Models
+PIL/Pillow - Image Processing
+
+Standard Libraries:
+math - Provides mathematical functions, including trigonometric, logarithmic, and other functions.
+datetime - Provides functions to manipulate dates and times, including time parsing, formatting, and arithmetic.
+os - Provides a portable way of using operating system dependent functionality, like reading or writing to files.
+sys	- Allows Python programs to manipulate parts of the run-time environment such as command line arguments or exit status.
+random - Generates pseudo-random numbers, enables random element selection, random permutations and more.
+json - Offers methods to manipulate JSON objects, including parsing, serializing, and deserializing.
+re - Provides functions to work with regular expressions for powerful string manipulation techniques.
+sqlite3 - Allows interaction with SQLite database, a lightweight disk-based database that doesn’t require separate server process.
+csv - Allows the reading and writing of CSV files, which enables the manipulation and organization of data in table form.
+collections - Provides alternatives to built-in container data types such as list, set, dict, and tuple. Includes special types like Counter, deque and ordered dictionary.
+argparse - Handles command-line options and arguments, and generates usage messages. Offers a straightforward way to obtain command-line arguments into your scripts.
+functools - Provides tools for working with functions, such as higher-order functions, and functions that act on or return other functions.
+threading - Provides multiple threads of execution, useful when you want to improve the application performance by allowing multiple operations to run in parallel.
+multiprocessing - A package that supports spawning processes using an API similar to the threading module.
+urllib - Fetch URLs and provides functionality for parsing URLs and changing between absolute and relative paths.
+statistics - Provides functions to calculate mathematical statistics of numerical data.
+http.server - This module defines classes for implementing HTTP servers (Web servers).
+http.client - Contains classes for making HTTP requests.
+smtpd - Defines an SMTP server which can receive e-mails and optionally pass them on to a real SMTP server.
+smtplib - The smtplib module defines an SMTP client session object that can be used to send mail to any Internet machine with an SMTP or ESMTP listener daemon.
