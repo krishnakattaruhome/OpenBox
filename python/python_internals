@@ -1,12 +1,25 @@
 
 # get a list of all keywords in python
-
 import keyword
-print(keyword.kwlist)
 print(len(keyword.kwlist))
+print(keyword.kwlist)
 
 # get a list of all builtin functions in python
-
+print(len(dir(__builtins__)))
 print(dir(__builtins__))
-len(dir(__builtins__))
 
+#get a list of standard libraries in python
+import sys
+print(len(sys.stdlib_module_names))
+print(sys.stdlib_module_names)
+
+#get the list of directories that the interpreter will search in for the required module.
+print(sys.path)
+
+#get the list of pip installed packages along with their versions.
+import pkg_resources
+installed_packages = pkg_resources.working_set
+installed_packages_list = sorted(["%s==%s" % (i.key, i.version) for i in installed_packages])
+print(len(installed_packages_list))
+for package in installed_packages_list:
+    print(package)
