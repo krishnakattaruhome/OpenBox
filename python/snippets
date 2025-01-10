@@ -1,0 +1,1697 @@
+
+
+#==print
+    #The `print()` function in Python is used to display the output on the screen.
+
+```python
+# Example of print
+print("Hello, world!")  # Prints a string
+print(42)               # Prints a number
+print(3.14)             # Prints a float
+```
+
+#==Variables for Strings
+    #In Python, you can store strings in variables.
+
+```python
+# Variables for strings
+name = "Alice"
+greeting = "Good Morning!"
+full_greeting = greeting + " " + name  # Concatenating strings
+
+print(full_greeting)  # Output: Good Morning! Alice
+```
+
+#==Variables for Numbers
+    #In Python, you can store numerical values like integers and floats in variables.
+
+```python
+# Variables for numbers
+age = 25               # Integer
+height = 5.9           # Float
+
+# Performing basic operations
+sum_of_numbers = age + height
+print(sum_of_numbers)  # Output: 30.9
+```
+
+#==Variable Names Legal and Illegal
+    #Variable names in Python must adhere to certain rules. Here are examples of legal and illegal variable names:
+
+```python
+# Legal variable names
+my_variable = 10         # Legal
+age_23 = 23              # Legal
+_height = 5.9            # Legal
+
+# Illegal variable names (will throw an error)
+# 1age = 25              # Illegal, can't start with a number
+# for = 5                # Illegal, can't use reserved keywords
+# my-variable = 10       # Illegal, hyphen is not allowed
+
+# Uncommenting the above illegal lines will result in SyntaxError
+```
+
+#==Math expressions: Familiar operators
+    #These are the basic mathematical operators in Python: addition, subtraction, multiplication, division, modulus, and exponentiation.
+
+```python
+# Math expressions: Familiar operators
+a = 10
+b = 5
+
+addition = a + b            # Addition
+subtraction = a - b         # Subtraction
+multiplication = a * b      # Multiplication
+division = a / b            # Division (result is a float)
+modulus = a % b             # Modulus (remainder of division)
+exponentiation = a ** b     # Exponentiation (a raised to the power of b)
+
+print("Addition:", addition)
+print("Subtraction:", subtraction)
+print("Multiplication:", multiplication)
+print("Division:", division)
+print("Modulus:", modulus)
+print("Exponentiation:", exponentiation)
+```
+
+#==Math expressions: Unfamiliar operators
+    #Python supports some less common math operators such as floor division and `divmod`.
+
+```python
+# Math expressions: Unfamiliar operators
+a = 17
+b = 3
+
+floor_division = a // b  # Floor division (integer division)
+divmod_result = divmod(a, b)  # Returns a tuple (quotient, remainder)
+
+print("Floor Division:", floor_division)
+print("Divmod Result:", divmod_result)  # Output: (quotient, remainder)
+```
+
+#==Math expressions: Eliminating ambiguity
+    #Parentheses are used in Python to eliminate ambiguity in expressions, ensuring that operations are performed in the desired order.
+
+```python
+# Math expressions: Eliminating ambiguity
+x = 10
+y = 5
+z = 3
+
+# Without parentheses: multiplication and division take precedence over addition and subtraction
+result1 = x + y * z      # y * z is performed first, then x + (y * z)
+
+# Using parentheses to eliminate ambiguity
+result2 = (x + y) * z    # x + y is performed first, then (x + y) * z
+
+print("Without Parentheses:", result1)
+print("With Parentheses:", result2)
+```
+
+#==Concatenating text strings
+    #In Python, strings can be concatenated using the `+` operator.
+
+```python
+# Concatenating text strings
+greeting = "Hello"
+name = "Alice"
+
+# Concatenate using the '+' operator
+message = greeting + ", " + name + "!"  # Concatenate strings with spaces
+
+print(message)  # Output: Hello, Alice!
+```
+
+#==if statements
+    #An `if` statement in Python is used to check a condition and execute a block of code if that condition is `True`.
+
+```python
+# if statement
+age = 18
+
+if age >= 18:
+    print("You are an adult.")  # This will execute because the condition is true.
+```
+
+#==Comparison operators
+    #Comparison operators are used to compare two values. They include `==`, `!=`, `>`, `<`, `>=`, and `<=`.
+
+```python
+# Comparison operators
+a = 10
+b = 5
+
+print(a == b)  # False, checks if a is equal to b
+print(a != b)  # True, checks if a is not equal to b
+print(a > b)   # True, checks if a is greater than b
+print(a < b)   # False, checks if a is less than b
+print(a >= b)  # True, checks if a is greater than or equal to b
+print(a <= b)  # False, checks if a is less than or equal to b
+```
+
+#==else and elif statements
+    #The `else` and `elif` statements are used to handle alternative conditions when the `if` condition is not met.
+
+```python
+# else and elif statements
+age = 20
+
+if age < 18:
+    print("You are a minor.")
+elif age == 18:
+    print("You just became an adult.")
+else:
+    print("You are an adult.")  # This will execute because age is greater than 18.
+```
+
+#==Testing sets of conditions
+    #You can use logical operators (`and`, `or`, `not`) to test multiple conditions at once.
+
+
+```python
+# Testing sets of conditions
+age = 25
+has_license = True
+
+# Check if age is greater than 18 and has a driving license
+if age >= 18 and has_license:
+    print("You can drive.")  # This will execute because both conditions are true.
+
+# Check if age is less than 18 or doesn't have a driving license
+if age < 18 or not has_license:
+    print("You cannot drive.")
+else:
+    print("You are allowed to drive.")
+```
+
+#==if statements nested
+    #Nested `if` statements are used when one condition is tested inside another condition.
+
+```python
+# if statements nested
+age = 22
+has_ticket = True
+
+if age >= 18:
+    if has_ticket:
+        print("You can attend the event.")  # This will execute because both conditions are true.
+    else:
+        print("You need a ticket to attend the event.")
+else:
+    print("You must be 18 or older to attend the event.")
+```
+
+#==Comments
+    #Comments in Python are written using `#` for single-line comments and triple quotes (`'''` or `"""`) for multi-line comments.
+
+```python
+# This is a single-line comment
+age = 30  # Inline comment
+
+'''
+This is a multi-line comment.
+You can use it to explain longer sections of code
+or provide additional information.
+'''
+print("Hello, world!")  # This will print 'Hello, world!' to the screen
+```
+
+#==for loops
+    #A `for` loop in Python is used to iterate over a sequence (such as a list, tuple, or string) and execute a block of code multiple times.
+
+```python
+# for loop
+fruits = ["apple", "banana", "cherry"]
+
+# Loop through each fruit in the list
+for fruit in fruits:
+    print(fruit)
+```
+**Output**:
+```
+apple
+banana
+cherry
+```
+
+#==for loops nested
+    #A nested `for` loop is a loop inside another loop. It allows you to iterate over multiple sequences or perform more complex iterations.
+
+```python
+# for loops nested
+colors = ["red", "green", "blue"]
+fruits = ["apple", "banana", "cherry"]
+
+# Loop through colors and fruits
+for color in colors:
+    for fruit in fruits:
+        print(f"The color is {color} and the fruit is {fruit}")
+```
+**Output**:
+```
+The color is red and the fruit is apple
+The color is red and the fruit is banana
+The color is red and the fruit is cherry
+The color is green and the fruit is apple
+The color is green and the fruit is banana
+The color is green and the fruit is cherry
+The color is blue and the fruit is apple
+The color is blue and the fruit is banana
+The color is blue and the fruit is cherry
+```
+
+#==Getting information from the user and converting strings and numbers
+    #You can use the `input()` function to get information from the user. The input is always returned as a string, so you may need to convert it into a number using `int()` or `float()` if needed.
+
+```python
+# Getting information from the user and converting strings and numbers
+name = input("Enter your name: ")  # Gets input as a string
+print(f"Hello, {name}!")
+
+age = int(input("Enter your age: "))  # Converts input to an integer
+print(f"You are {age} years old.")
+
+height = float(input("Enter your height in meters: "))  # Converts input to a float
+print(f"Your height is {height} meters.")
+```
+
+**Sample Input/Output**:
+```
+Enter your name: Alice
+Hello, Alice!
+Enter your age: 25
+You are 25 years old.
+Enter your height in meters: 1.75
+Your height is 1.75 meters.
+```
+
+#==Changing case
+    #In Python, you can change the case of a string using methods like `upper()`, `lower()`, `capitalize()`, and `title()`.
+
+```python
+# Changing case
+text = "hello world"
+
+# Convert to uppercase
+uppercase_text = text.upper()
+print(uppercase_text)  # Output: HELLO WORLD
+
+# Convert to lowercase
+lowercase_text = text.lower()
+print(lowercase_text)  # Output: hello world
+
+# Capitalize the first letter of the string
+capitalized_text = text.capitalize()
+print(capitalized_text)  # Output: Hello world
+
+# Convert the first letter of each word to uppercase
+title_text = text.title()
+print(title_text)  # Output: Hello World
+```
+
+#==While loops
+    #A `while` loop repeatedly executes a block of code as long as a condition is `True`. When the condition becomes `False`, the loop stops.
+
+```python
+# While loops: Basic example
+count = 0
+
+while count < 5:
+    print(f"Count is {count}")
+    count += 1  # Increment count to avoid infinite loop
+```
+
+**Output**:
+```
+Count is 0
+Count is 1
+Count is 2
+Count is 3
+Count is 4
+```
+
+In this example, the loop continues as long as the value of `count` is less than 5. The value of `count` is incremented in each iteration, ensuring the loop eventually stops.
+
+#==While loops: Setting a flag
+    #A flag is often used to control the flow of the program or break out of the loop under specific conditions. It is typically a boolean variable (either `True` or `False`).
+
+#### Example 1: Using a Flag to Control a While Loop
+```python
+# While loops: Setting a flag
+flag = True
+count = 0
+
+while flag:
+    print(f"Count is {count}")
+    count += 1
+    
+    # Setting the flag to False once the count reaches 5
+    if count == 5:
+        flag = False  # This will stop the loop once count reaches 5
+```
+
+**Output**:
+```
+Count is 0
+Count is 1
+Count is 2
+Count is 3
+Count is 4
+```
+
+#### Explanation:
+- The `flag` is initially set to `True`, so the while loop continues to run.
+- The `count` is incremented on each iteration.
+- When `count` reaches 5, the flag is set to `False`, which causes the loop to exit.
+
+#### Example 2: Using a Flag to Check for User Input
+A flag can also be useful when waiting for specific user input in a loop.
+
+```python
+# While loops: Setting a flag with user input
+flag = True
+
+while flag:
+    user_input = input("Type 'exit' to stop the loop: ")
+    
+    if user_input == 'exit':
+        flag = False  # Setting the flag to False to stop the loop
+    else:
+        print("You typed:", user_input)
+```
+
+**Output** (until the user types 'exit'):
+```
+Type 'exit' to stop the loop: Hello
+You typed: Hello
+Type 'exit' to stop the loop: How are you?
+You typed: How are you?
+Type 'exit' to stop the loop: exit
+```
+
+#### Explanation:
+- The loop keeps running until the user types `exit`.
+- The `flag` is used to control whether the loop should continue or not. When `exit` is typed, the `flag` is set to `False`, and the loop stops.
+
+
+#==Lists: Adding and changing elements
+    #In Python, lists are mutable, which means you can change their contents. You can also add new elements to a list using methods like `append()`, `insert()`, and list slicing.
+
+```python
+# Lists: Adding and changing elements
+fruits = ["apple", "banana", "cherry"]
+
+# Changing an element
+fruits[1] = "blueberry"  # Changes "banana" to "blueberry"
+print(fruits)  # Output: ['apple', 'blueberry', 'cherry']
+
+# Adding an element to the end
+fruits.append("orange")
+print(fruits)  # Output: ['apple', 'blueberry', 'cherry', 'orange']
+
+# Inserting an element at a specific index
+fruits.insert(1, "mango")  # Insert "mango" at index 1
+print(fruits)  # Output: ['apple', 'mango', 'blueberry', 'cherry', 'orange']
+```
+
+#==Lists: Taking slices out of them
+    #You can use slicing to extract a portion of a list.
+
+```python
+# Lists: Taking slices out of them
+numbers = [1, 2, 3, 4, 5, 6, 7]
+
+# Slicing the list from index 2 to 5 (not including 5)
+sublist = numbers[2:5]  # [3, 4, 5]
+print(sublist)
+
+# Slicing from the beginning to index 3
+sublist2 = numbers[:3]  # [1, 2, 3]
+print(sublist2)
+
+# Slicing from index 4 to the end
+sublist3 = numbers[4:]  # [5, 6, 7]
+print(sublist3)
+
+# Slicing the entire list
+sublist4 = numbers[:]  # [1, 2, 3, 4, 5, 6, 7]
+print(sublist4)
+```
+
+#==Lists: Deleting and removing elements
+    #You can remove elements from a list using `del`, `remove()`, and `clear()`.
+
+```python
+# Lists: Deleting and removing elements
+fruits = ["apple", "banana", "cherry", "mango", "orange"]
+
+# Using del to remove an element by index
+del fruits[2]  # Removes "cherry"
+print(fruits)  # Output: ['apple', 'banana', 'mango', 'orange']
+
+# Using remove() to remove by value
+fruits.remove("banana")  # Removes "banana"
+print(fruits)  # Output: ['apple', 'mango', 'orange']
+
+# Using clear() to remove all elements
+fruits.clear()
+print(fruits)  # Output: []
+```
+
+#==Lists: popping elements
+    #The `pop()` method removes and returns an element from a list. You can specify the index, or it will remove the last element by default.
+
+```python
+# Lists: Popping elements
+fruits = ["apple", "banana", "cherry", "mango", "orange"]
+
+# Popping the last element (no index specified)
+last_fruit = fruits.pop()
+print(last_fruit)  # Output: 'orange'
+print(fruits)  # Output: ['apple', 'banana', 'cherry', 'mango']
+
+# Popping an element by index
+popped_fruit = fruits.pop(1)  # Removes "banana" (index 1)
+print(popped_fruit)  # Output: 'banana'
+print(fruits)  # Output: ['apple', 'cherry', 'mango']
+```
+
+#==Tuples
+    #Tuples are similar to lists, but they are immutable (cannot be changed after creation). You can create a tuple using parentheses `()`.
+
+```python
+# Tuples
+person = ("John", 30, "New York")
+
+# Accessing tuple elements by index
+print(person[0])  # Output: John
+print(person[1])  # Output: 30
+
+# Tuples are immutable, so the following line would cause an error:
+# person[1] = 35  # This will raise a TypeError: 'tuple' object does not support item assignment
+
+# You can concatenate tuples
+person_info = person + ("Engineer",)
+print(person_info)  # Output: ('John', 30, 'New York', 'Engineer')
+
+# Tuple unpacking (assigning tuple elements to variables)
+name, age, city = person
+print(name)  # Output: John
+print(age)   # Output: 30
+print(city)  # Output: New York
+```
+
+#==Dictionaries: What they are
+    #Dictionaries in Python are unordered collections of key-value pairs. Each key is unique and is used to access its corresponding value.
+
+```python
+# Dictionaries: What they are
+person = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York"
+}
+
+print(person)  # Output: {'name': 'Alice', 'age': 30, 'city': 'New York'}
+```
+
+#==Dictionaries: How to code one
+    #You can create a dictionary using curly braces `{}` and separating keys from values using colons `:`.
+
+```python
+# Dictionaries: How to code one
+student = {
+    "name": "John",
+    "age": 22,
+    "major": "Computer Science"
+}
+
+print(student)  # Output: {'name': 'John', 'age': 22, 'major': 'Computer Science'}
+```
+
+#==Dictionaries: How to pick information out of them
+    #You can retrieve the value associated with a specific key using square brackets `[]`.
+
+```python
+# Dictionaries: How to pick information out of them
+student = {
+    "name": "John",
+    "age": 22,
+    "major": "Computer Science"
+}
+
+# Accessing the value by key
+print(student["name"])  # Output: John
+print(student["age"])   # Output: 22
+```
+
+#==Dictionaries: The versatility of keys and values
+    #In Python, dictionary keys can be any immutable type (such as strings, numbers, or tuples), and values can be any data type, including lists, other dictionaries, or functions.
+
+```python
+# Dictionaries: The versatility of keys and values
+data = {
+    "name": "Alice",
+    42: "The answer to everything",
+    (1, 2): "Tuple key",
+    "hobbies": ["reading", "traveling", "coding"]
+}
+
+print(data["name"])          # Output: Alice
+print(data[42])              # Output: The answer to everything
+print(data[(1, 2)])          # Output: Tuple key
+print(data["hobbies"])       # Output: ['reading', 'traveling', 'coding']
+```
+
+#==Dictionaries: Adding items
+    #You can add new items to a dictionary by specifying a new key and assigning a value to it.
+
+```python
+# Dictionaries: Adding items
+student = {
+    "name": "John",
+    "age": 22
+}
+
+# Adding a new key-value pair
+student["major"] = "Computer Science"
+print(student)  # Output: {'name': 'John', 'age': 22, 'major': 'Computer Science'}
+```
+
+#==Dictionaries: Removing and changing items
+    #You can remove items using `del` or `pop()`. To change the value of an existing key, simply assign a new value.
+
+```python
+# Dictionaries: Removing and changing items
+student = {
+    "name": "John",
+    "age": 22,
+    "major": "Computer Science"
+}
+
+# Changing the value of an existing key
+student["major"] = "Mathematics"
+print(student)  # Output: {'name': 'John', 'age': 22, 'major': 'Mathematics'}
+
+# Removing a key-value pair using del
+del student["age"]
+print(student)  # Output: {'name': 'John', 'major': 'Mathematics'}
+
+# Removing a key-value pair using pop()
+removed_value = student.pop("major")
+print(removed_value)  # Output: Mathematics
+print(student)        # Output: {'name': 'John'}
+```
+
+#==Dictionaries: Looping through values
+    #You can loop through the values of a dictionary using the `.values()` method.
+
+```python
+# Dictionaries: Looping through values
+student = {
+    "name": "John",
+    "age": 22,
+    "major": "Computer Science"
+}
+
+# Loop through values
+for value in student.values():
+    print(value)
+```
+**Output**:
+```
+John
+22
+Computer Science
+```
+
+#==Dictionaries: Looping through keys
+    #You can loop through the keys of a dictionary using the `.keys()` method.
+
+```python
+# Dictionaries: Looping through keys
+student = {
+    "name": "John",
+    "age": 22,
+    "major": "Computer Science"
+}
+
+# Loop through keys
+for key in student.keys():
+    print(key)
+```
+**Output**:
+```
+name
+age
+major
+```
+
+#==Dictionaries: Looping through key-value pairs
+    #You can loop through both keys and values of a dictionary using the `.items()` method.
+
+```python
+# Dictionaries: Looping through key-value pairs
+student = {
+    "name": "John",
+    "age": 22,
+    "major": "Computer Science"
+}
+
+# Loop through key-value pairs
+for key, value in student.items():
+    print(f"Key: {key}, Value: {value}")
+```
+**Output**:
+```
+Key: name, Value: John
+Key: age, Value: 22
+Key: major, Value: Computer Science
+```
+
+#==Creating a list of dictionaries
+    #A list of dictionaries is simply a list where each item is a dictionary.
+
+```python
+# Creating a list of dictionaries
+students = [
+    {"name": "Alice", "age": 22, "major": "Computer Science"},
+    {"name": "Bob", "age": 24, "major": "Mathematics"},
+    {"name": "Charlie", "age": 21, "major": "Physics"}
+]
+
+print(students)
+```
+
+**Output**:
+```
+[{'name': 'Alice', 'age': 22, 'major': 'Computer Science'},
+ {'name': 'Bob', 'age': 24, 'major': 'Mathematics'},
+ {'name': 'Charlie', 'age': 21, 'major': 'Physics'}]
+```
+
+#==How to Pick Information Out of a List of Dictionaries
+    #You can pick information out of a list of dictionaries by accessing the dictionary's key for each element in the list.
+
+```python
+# How to pick information out of a list of dictionaries
+students = [
+    {"name": "Alice", "age": 22, "major": "Computer Science"},
+    {"name": "Bob", "age": 24, "major": "Mathematics"},
+    {"name": "Charlie", "age": 21, "major": "Physics"}
+]
+
+# Accessing the name and age of each student
+for student in students:
+    print(f"Name: {student['name']}, Age: {student['age']}")
+```
+
+**Output**:
+```
+Name: Alice, Age: 22
+Name: Bob, Age: 24
+Name: Charlie, Age: 21
+```
+
+#==How to Append a New Dictionary to a List of Dictionaries
+    #You can append a new dictionary to a list using the `append()` method.
+
+```python
+# How to append a new dictionary to a list of dictionaries
+students = [
+    {"name": "Alice", "age": 22, "major": "Computer Science"},
+    {"name": "Bob", "age": 24, "major": "Mathematics"}
+]
+
+new_student = {"name": "David", "age": 23, "major": "Chemistry"}
+
+# Appending the new student dictionary to the list
+students.append(new_student)
+
+print(students)
+```
+
+**Output**:
+```
+[{'name': 'Alice', 'age': 22, 'major': 'Computer Science'},
+ {'name': 'Bob', 'age': 24, 'major': 'Mathematics'},
+ {'name': 'David', 'age': 23, 'major': 'Chemistry'}]
+```
+
+#==Creating a Dictionary That Contains Lists
+    #You can create a dictionary where the values are lists.
+
+```python
+# Creating a dictionary that contains lists
+person = {
+    "name": "Alice",
+    "age": 30,
+    "hobbies": ["reading", "traveling", "swimming"]
+}
+
+print(person)
+```
+
+**Output**:
+```
+{'name': 'Alice', 'age': 30, 'hobbies': ['reading', 'traveling', 'swimming']}
+```
+
+#==How to Get Information Out of a List Within a Dictionary
+    #You can access a list within a dictionary by using the key and then accessing the elements within the list.
+
+```python
+# How to get information out of a list within a dictionary
+person = {
+    "name": "Alice",
+    "age": 30,
+    "hobbies": ["reading", "traveling", "swimming"]
+}
+
+# Accessing the hobbies list
+hobbies = person["hobbies"]
+
+# Looping through the list to print hobbies
+for hobby in hobbies:
+    print(hobby)
+```
+
+**Output**:
+```
+reading
+traveling
+swimming
+```
+
+#==Creating a Dictionary That Contains a Dictionary
+    #A dictionary can contain another dictionary as its value. This allows for nested data structures.
+
+```python
+# Creating a dictionary that contains a dictionary
+employee = {
+    "name": "John",
+    "position": "Manager",
+    "details": {
+        "age": 35,
+        "department": "Sales",
+        "years_of_experience": 10
+    }
+}
+
+print(employee)
+```
+
+**Output**:
+```
+{'name': 'John', 'position': 'Manager', 'details': {'age': 35, 'department': 'Sales', 'years_of_experience': 10}}
+```
+
+#==How to Get Information Out of a Dictionary Within Another Dictionary
+    #You can access information from a nested dictionary by chaining key accesses.
+
+```python
+# How to get information out of a dictionary within another dictionary
+employee = {
+    "name": "John",
+    "position": "Manager",
+    "details": {
+        "age": 35,
+        "department": "Sales",
+        "years_of_experience": 10
+    }
+}
+
+# Accessing the 'details' dictionary and getting the 'age'
+age = employee["details"]["age"]
+print(f"Age: {age}")  # Output: Age: 35
+
+# Accessing 'department'
+department = employee["details"]["department"]
+print(f"Department: {department}")  # Output: Department: Sales
+```
+
+**Output**:
+```
+Age: 35
+Department: Sales
+```
+
+#==Functions: Passing Them Information
+    #Functions can accept arguments (or parameters), which are values passed to the function to be used within it.
+
+```python
+# Functions: Passing them information
+def greet(name):
+    print(f"Hello, {name}!")
+
+greet("Alice")  # Passing "Alice" as an argument to the function
+greet("Bob")    # Passing "Bob" as an argument to the function
+```
+
+**Output**:
+```
+Hello, Alice!
+Hello, Bob!
+```
+
+#==Functions: Passing Information to Them a Different Way
+    #You can pass information using keyword arguments. This allows you to explicitly specify which argument is being passed.
+
+```python
+# Functions: Passing information to them a different way
+def greet(name, age):
+    print(f"Hello, {name}! You are {age} years old.")
+
+# Using keyword arguments to pass information
+greet(name="Alice", age=25)
+```
+
+**Output**:
+```
+Hello, Alice! You are 25 years old.
+```
+
+#==Functions: Assigning a Default Value to a Parameter
+    #You can assign default values to parameters so that if no value is provided, the default value is used.
+
+```python
+# Functions: Assigning a default value to a parameter
+def greet(name="Guest"):
+    print(f"Hello, {name}!")
+
+greet()           # No argument passed, uses default "Guest"
+greet("Alice")    # Argument passed, uses "Alice"
+```
+
+**Output**:
+```
+Hello, Guest!
+Hello, Alice!
+```
+
+#==Functions: Mixing Positional and Keyword Arguments
+    #You can mix positional and keyword arguments. However, positional arguments should come before keyword arguments.
+
+```python
+# Functions: Mixing positional and keyword arguments
+def greet(name, age=30):
+    print(f"Hello, {name}! You are {age} years old.")
+
+greet("Alice")          # Positional argument, uses default for age
+greet("Bob", age=40)    # Positional argument and keyword argument for age
+```
+
+**Output**:
+```
+Hello, Alice! You are 30 years old.
+Hello, Bob! You are 40 years old.
+```
+
+#==Functions: Dealing with an Unknown Number of Arguments
+    #You can use `*args` to pass a variable number of positional arguments and `**kwargs` for a variable number of keyword arguments.
+
+```python
+# Functions: Dealing with an unknown number of arguments
+def greet(*names):
+    for name in names:
+        print(f"Hello, {name}!")
+
+greet("Alice", "Bob", "Charlie")
+```
+
+**Output**:
+```
+Hello, Alice!
+Hello, Bob!
+Hello, Charlie!
+```
+
+```python
+def greet(**info):
+    for key, value in info.items():
+        print(f"{key}: {value}")
+
+greet(name="Alice", age=25, city="New York")
+```
+
+**Output**:
+```
+name: Alice
+age: 25
+city: New York
+```
+
+#==Functions: Passing Information Back From Them
+    #A function can return values using the `return` statement.
+
+```python
+# Functions: Passing information back from them
+def add_numbers(a, b):
+    return a + b
+
+result = add_numbers(5, 3)
+print(result)  # Output: 8
+```
+
+**Output**:
+```
+8
+```
+
+#==Using Functions as Variables (Which Is What They Really Are)
+    #Functions are first-class objects in Python, meaning they can be assigned to variables, passed as arguments, and returned from other functions.
+
+```python
+# Using functions as variables (which is what they really are)
+def greet(name):
+    return f"Hello, {name}!"
+
+greeting_function = greet  # Assigning the function to a variable
+print(greeting_function("Alice"))  # Calling the function using the variable
+```
+
+**Output**:
+```
+Hello, Alice!
+```
+
+#==Functions: Local vs. Global Variables
+    #- **Local variables** are defined inside a function and cannot be accessed outside it.
+    #- **Global variables** are defined outside any function and can be accessed by any function in the same scope.
+
+```python
+# Functions: Local vs. global variables
+x = 10  # Global variable
+
+def my_function():
+    x = 20  # Local variable (inside the function)
+    print(f"Inside function: {x}")
+
+my_function()  # Output: Inside function: 20
+print(f"Outside function: {x}")  # Output: Outside function: 10
+```
+
+**Output**:
+```
+Inside function: 20
+Outside function: 10
+```
+
+If you want to modify the global variable inside a function, use the `global` keyword:
+
+```python
+# Modifying a global variable inside a function
+x = 10  # Global variable
+
+def modify_global():
+    global x
+    x = 20  # Changing the global variable
+
+modify_global()
+print(x)  # Output: 20
+```
+
+**Output**:
+```
+20
+```
+
+#==Functions Within Functions
+    #A function can be defined inside another function. This is called a **nested function**.
+
+```python
+# Functions within functions
+def outer_function():
+    print("This is the outer function.")
+    
+    def inner_function():
+        print("This is the inner function.")
+    
+    inner_function()  # Calling the inner function inside the outer function
+
+outer_function()
+```
+
+**Output**:
+```
+This is the outer function.
+This is the inner function.
+```
+
+You can also return a function from another function:
+
+```python
+# Functions within functions (Returning a function)
+def outer_function():
+    def inner_function():
+        return "Hello from the inner function!"
+    
+    return inner_function  # Returning the inner function
+
+# Calling the outer function
+result_function = outer_function()
+print(result_function())  # Calling the inner function returned by outer_function
+```
+
+**Output**:
+```
+Hello from the inner function!
+```
+
+
+#==Classes: Starting to Build the Structure
+    #A class in Python is a blueprint for creating objects. It allows you to structure data and functionality.
+
+```python
+# Classes: Starting to build the structure
+class Dog:
+    # Initializer (Constructor) method
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+# Creating an instance of the Dog class
+my_dog = Dog("Buddy", 3)
+
+# Printing the object's attributes
+print(f"My dog's name is {my_dog.name} and he is {my_dog.age} years old.")
+```
+
+**Output**:
+```
+My dog's name is Buddy and he is 3 years old.
+```
+
+In this code:
+- The `Dog` class has an initializer (`__init__`) method that sets the `name` and `age` attributes for any instance of the class.
+- We create an instance `my_dog` of the `Dog` class and access its attributes.
+
+#==Classes: A Bit of Housekeeping
+    #In classes, it's important to maintain a clean structure, especially with methods and constructors.
+
+```python
+# Classes: A bit of housekeeping
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def display_info(self):
+        print(f"This car is a {self.year} {self.make} {self.model}.")
+
+# Creating an instance of the Car class
+my_car = Car("Toyota", "Corolla", 2020)
+
+# Calling a method from the class
+my_car.display_info()
+```
+
+**Output**:
+```
+This car is a 2020 Toyota Corolla.
+```
+
+In this code:
+- The `Car` class contains an `__init__` method for initialization and a `display_info` method to display information about the car.
+
+#==Classes: Creating an Instance
+    #An instance is a specific object created from a class.
+
+```python
+# Classes: Creating an instance
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+# Creating instances of the Person class
+person1 = Person("Alice", 30)
+person2 = Person("Bob", 25)
+
+print(f"{person1.name} is {person1.age} years old.")
+print(f"{person2.name} is {person2.age} years old.")
+```
+
+**Output**:
+```
+Alice is 30 years old.
+Bob is 25 years old.
+```
+
+Here, two instances of the `Person` class (`person1` and `person2`) are created with different attributes.
+
+#==Classes: A Little More Complexity
+    #You can add more functionality to a class by introducing additional methods.
+
+```python
+# Classes: A little more complexity
+class BankAccount:
+    def __init__(self, account_holder, balance=0):
+        self.account_holder = account_holder
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"Deposited ${amount}. New balance: ${self.balance}.")
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+            print("Insufficient funds!")
+        else:
+            self.balance -= amount
+            print(f"Withdrew ${amount}. New balance: ${self.balance}.")
+
+# Creating an instance of BankAccount
+account = BankAccount("John", 1000)
+account.deposit(500)
+account.withdraw(200)
+account.withdraw(1500)  # Will show insufficient funds
+```
+
+**Output**:
+```
+Deposited $500. New balance: $1500.
+Withdrew $200. New balance: $1300.
+Insufficient funds!
+```
+
+In this example:
+- The `BankAccount` class has methods for `deposit` and `withdraw`, adding complexity to the class beyond just storing data.
+
+#==Classes: Getting Info Out of Instances
+    #You can access the attributes of an instance to retrieve information.
+
+```python
+# Classes: Getting info out of instances
+class Student:
+    def __init__(self, name, grade):
+        self.name = name
+        self.grade = grade
+
+    def get_grade(self):
+        return self.grade
+
+# Creating an instance of the Student class
+student1 = Student("Alice", "A")
+
+# Accessing the instance's attribute directly and using a method to get information
+print(f"{student1.name}'s grade is {student1.get_grade()}.")
+```
+
+**Output**:
+```
+Alice's grade is A.
+```
+
+Here, the `Student` class has a method `get_grade()` that returns the grade of the student, which can be accessed.
+
+#==Classes: Building Functions Into Them
+    #Functions (methods) are an integral part of a class and can perform actions on the instance's attributes.
+
+```python
+# Classes: Building functions into them
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * self.radius ** 2
+
+# Creating an instance of Circle class
+circle = Circle(5)
+
+# Calling the area method
+print(f"The area of the circle is {circle.area()} square units.")
+```
+
+**Output**:
+```
+The area of the circle is 78.5 square units.
+```
+
+In this example, the `Circle` class has a method `area()` that calculates the area of the circle using the formula π * r².
+
+#==Classes: Coding a Method
+    #A method is a function defined within a class that operates on instances of that class.
+
+```python
+# Classes: Coding a method
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def perimeter(self):
+        return 2 * (self.width + self.height)
+
+# Creating an instance of Rectangle class
+rectangle = Rectangle(4, 7)
+
+# Calling the perimeter method
+print(f"The perimeter of the rectangle is {rectangle.perimeter()} units.")
+```
+
+**Output**:
+```
+The perimeter of the rectangle is 22 units.
+```
+
+The `Rectangle` class defines a method `perimeter()` to calculate the perimeter of the rectangle.
+
+#==Classes: Changing an Attribute's Value
+    #You can modify the attributes of a class instance directly or through a method.
+
+```python
+# Classes: Changing an attribute's value
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def change_year(self, new_year):
+        self.year = new_year
+
+# Creating an instance of the Car class
+my_car = Car("Honda", "Civic", 2020)
+
+# Modifying the year attribute using the change_year method
+print(f"Before changing year: {my_car.year}")
+my_car.change_year(2022)
+print(f"After changing year: {my_car.year}")
+```
+
+**Output**:
+```
+Before changing year: 2020
+After changing year: 2022
+```
+
+#==Data Files: Storing Data
+    #You can store data in a file using Python's built-in file handling functions like `open()`. We will demonstrate storing data using the write (`w`) mode.
+
+```python
+# Data files: Storing data
+data = ["Alice", "Bob", "Charlie", "Dave"]
+
+# Open a file in write mode ('w') and store data
+with open("names.txt", "w") as file:
+    for name in data:
+        file.write(name + "\n")  # Writing each name on a new line
+
+print("Data has been stored in the file 'names.txt'.")
+```
+
+**Explanation**:
+- The `open()` function opens a file in the specified mode (`w` for writing).
+- The `write()` function is used to write data to the file.
+- The `with` statement ensures the file is properly closed after writing.
+
+#==Data Files: Retrieving Data
+    #Once data is stored in a file, you can retrieve it using the read (`r`) mode.
+
+```python
+# Data files: Retrieving data
+with open("names.txt", "r") as file:
+    content = file.readlines()  # Read all lines from the file
+
+# Print the content
+print("Retrieved data from the file:")
+for line in content:
+    print(line.strip())  # strip() removes the newline character
+```
+
+**Explanation**:
+- The `open()` function is used to open the file in read mode (`r`).
+- The `readlines()` method reads all lines from the file and stores them in a list.
+- The `strip()` function is used to remove newline characters from each line.
+
+#==Data Files: Appending Data
+    #To append data to an existing file (instead of overwriting it), you use the append (`a`) mode.
+
+```python
+# Data files: Appending data
+new_data = ["Eve", "Frank"]
+
+# Open the file in append mode ('a') and add new data
+with open("names.txt", "a") as file:
+    for name in new_data:
+        file.write(name + "\n")  # Append each name to the file
+
+print("New data has been appended to the file 'names.txt'.")
+```
+
+**Explanation**:
+- The `open()` function is used with mode `'a'` to append data to an existing file.
+- Data is written to the file without overwriting the existing content.
+
+---
+
+#==Full Example Workflow
+    #Let's combine all three operations: storing, retrieving, and appending data to demonstrate a full flow.
+
+```python
+# Full Example: Storing, retrieving, and appending data
+# Step 1: Store initial data in a file
+initial_data = ["Alice", "Bob", "Charlie"]
+
+# Open file in write mode and store initial data
+with open("names.txt", "w") as file:
+    for name in initial_data:
+        file.write(name + "\n")
+
+# Step 2: Retrieve and print the data
+print("Initial data stored in 'names.txt':")
+with open("names.txt", "r") as file:
+    content = file.readlines()
+    for line in content:
+        print(line.strip())
+
+# Step 3: Append new data to the file
+new_data = ["Dave", "Eve"]
+with open("names.txt", "a") as file:
+    for name in new_data:
+        file.write(name + "\n")
+
+# Step 4: Retrieve and print the updated data
+print("\nData after appending:")
+with open("names.txt", "r") as file:
+    content = file.readlines()
+    for line in content:
+        print(line.strip())
+```
+
+
+#==CSV Files: Reading Them
+    #To read a CSV file, we can use the `csv.reader` method. The `csv.reader` method helps parse the file into rows.
+
+```python
+import csv
+
+# CSV files: Reading them
+with open('data.csv', mode='r', newline='') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)
+```
+
+**Explanation**:
+- The `csv.reader` object is used to read the contents of the CSV file.
+- We iterate over the rows and print each one.
+
+#==CSV Files: Picking Information Out of Them
+    #Once we read a CSV file, we can extract specific pieces of information by accessing columns based on their index.
+
+```python
+import csv
+
+# CSV files: Picking information out of them
+with open('data.csv', mode='r', newline='') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        # Let's assume the file has columns: ID, Name, Age
+        print(f"Name: {row[1]}, Age: {row[2]}")  # Accessing Name and Age
+```
+
+**Explanation**:
+- After reading the rows, we access specific columns using indexing (e.g., `row[1]` for the name, `row[2]` for age).
+
+#==CSV Files: Loading Information into Them. Part 1
+    #To write data into a CSV file, we can use `csv.writer`. This method allows you to insert data into the file row by row.
+
+```python
+import csv
+
+# CSV files: Loading information into them. Part 1
+header = ['ID', 'Name', 'Age']
+rows = [
+    [1, 'Alice', 30],
+    [2, 'Bob', 25],
+    [3, 'Charlie', 35]
+]
+
+# Open the CSV file in write mode ('w') and write the data
+with open('data.csv', mode='w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow(header)  # Writing the header
+    writer.writerows(rows)  # Writing the rows
+```
+
+**Explanation**:
+- We write a header row first using `writerow()`, then write the data rows using `writerows()`.
+- The `newline=''` ensures the correct handling of newline characters in the CSV.
+
+#==CSV Files: Loading Information into Them. Part 2
+    #Here we load data into an existing CSV file, ensuring we write additional rows without overwriting the existing ones.
+
+```python
+import csv
+
+# CSV files: Loading information into them. Part 2
+additional_rows = [
+    [4, 'Dave', 40],
+    [5, 'Eve', 28]
+]
+
+# Open the CSV file in append mode ('a') to add data without overwriting
+with open('data.csv', mode='a', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerows(additional_rows)  # Appending new rows
+```
+
+**Explanation**:
+- The file is opened in append mode (`'a'`), so new data is added without overwriting the existing data.
+
+#==CSV Files: Loading Information into Them. Part 3
+    #In this part, we'll load and write data with different types of fields, including special characters and commas.
+
+```python
+import csv
+
+# CSV files: Loading information into them. Part 3
+data_with_commas = [
+    [1, 'Alice, the Developer', 30],
+    [2, 'Bob "the" Manager', 25],
+    [3, 'Charlie, the Engineer', 35]
+]
+
+# Open the CSV file in write mode and write the data
+with open('data.csv', mode='w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerows(data_with_commas)
+```
+
+**Explanation**:
+- When the data contains commas or quotes, `csv.writer` ensures proper escaping, so the data is correctly written to the CSV file.
+
+#==CSV Files: Appending Rows to Them
+    #To append data to an existing CSV file, we use the `a` mode in the `open()` function. This prevents overwriting existing data.
+
+```python
+import csv
+
+# CSV files: Appending rows to them
+new_data = [
+    [4, 'Dave', 40],
+    [5, 'Eve', 28]
+]
+
+# Open the file in append mode ('a')
+with open('data.csv', mode='a', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerows(new_data)  # Appending new rows to the existing file
+```
+
+**Explanation**:
+- The file is opened in append mode (`'a'`), which allows you to add rows at the end of the file without overwriting existing data.
+
+---
+
+#==Full Example Workflow with Sample Data
+    #Here is a full example where we first load, read, append, and then read again from a CSV file.
+
+```python
+import csv
+
+# Step 1: Writing initial data to a CSV file
+header = ['ID', 'Name', 'Age']
+initial_data = [
+    [1, 'Alice', 30],
+    [2, 'Bob', 25],
+    [3, 'Charlie', 35]
+]
+
+with open('data.csv', mode='w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow(header)  # Write the header
+    writer.writerows(initial_data)  # Write the initial data rows
+
+# Step 2: Reading and printing data from the CSV file
+print("Initial data in 'data.csv':")
+with open('data.csv', mode='r', newline='') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)
+
+# Step 3: Appending new data to the CSV file
+new_data = [
+    [4, 'Dave', 40],
+    [5, 'Eve', 28]
+]
+
+with open('data.csv', mode='a', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerows(new_data)  # Append new rows
+
+# Step 4: Reading and printing the updated data from the CSV file
+print("\nData after appending new rows:")
+with open('data.csv', mode='r', newline='') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)
+```
+
+**Explanation**:
+1. We first write initial data to the CSV file.
+2. We then read and print the content of the CSV file.
+3. Next, we append new rows to the file.
+4. Finally, we read and print the updated content.
+
+**Sample Output**:
+```
+Initial data in 'data.csv':
+['ID', 'Name', 'Age']
+['1', 'Alice', '30']
+['2', 'Bob', '25']
+['3', 'Charlie', '35']
+
+Data after appending new rows:
+['ID', 'Name', 'Age']
+['1', 'Alice', '30']
+['2', 'Bob', '25']
+['3', 'Charlie', '35']
+['4', 'Dave', '40']
+['5', 'Eve', '28']
+```
+
+#==How to Save a Python List or Dictionary in a File: JSON
+    #You can use the `json.dump()` method to save a Python list or dictionary to a JSON file. The data will be serialized into a JSON format.
+
+#### Saving a Python List to a JSON file:
+
+```python
+import json
+
+# Python List
+data_list = ['apple', 'banana', 'cherry', 'date']
+
+# Saving the list to a JSON file
+with open('data_list.json', 'w') as json_file:
+    json.dump(data_list, json_file)
+
+print("Python list has been saved to 'data_list.json'.")
+```
+
+#### Saving a Python Dictionary to a JSON file:
+
+```python
+import json
+
+# Python Dictionary
+data_dict = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York"
+}
+
+# Saving the dictionary to a JSON file
+with open('data_dict.json', 'w') as json_file:
+    json.dump(data_dict, json_file)
+
+print("Python dictionary has been saved to 'data_dict.json'.")
+```
+
+**Explanation**:
+- `json.dump()` serializes the Python object (list or dictionary) and writes it to the specified file in JSON format.
+- The `'w'` mode opens the file for writing. If the file doesn't exist, it will be created.
+
+---
+
+#==How to Retrieve a Python List or Dictionary from a JSON File
+    #To retrieve a list or dictionary stored in a JSON file, you can use the `json.load()` method. This will deserialize the JSON data back into a Python object.
+
+#### Retrieving a Python List from a JSON file:
+
+```python
+import json
+
+# Reading the Python list from the JSON file
+with open('data_list.json', 'r') as json_file:
+    retrieved_list = json.load(json_file)
+
+# Print the retrieved list
+print("Retrieved Python list:", retrieved_list)
+```
+
+#### Retrieving a Python Dictionary from a JSON file:
+
+```python
+import json
+
+# Reading the Python dictionary from the JSON file
+with open('data_dict.json', 'r') as json_file:
+    retrieved_dict = json.load(json_file)
+
+# Print the retrieved dictionary
+print("Retrieved Python dictionary:", retrieved_dict)
+```
+
+**Explanation**:
+- `json.load()` deserializes the JSON data from the file and converts it back into the corresponding Python object (list or dictionary).
+- The `'r'` mode opens the file for reading.
+
+---
+
+#==Full Example Workflow: Saving and Retrieving Data
+    #Here is an example where we save a list and a dictionary to a JSON file and then retrieve them.
+
+```python
+import json
+
+# Step 1: Python List and Dictionary
+data_list = ['apple', 'banana', 'cherry', 'date']
+data_dict = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York"
+}
+
+# Step 2: Saving the List and Dictionary to JSON files
+with open('data_list.json', 'w') as json_file:
+    json.dump(data_list, json_file)
+
+with open('data_dict.json', 'w') as json_file:
+    json.dump(data_dict, json_file)
+
+print("Data has been saved to JSON files.")
+
+# Step 3: Retrieving and Printing the List and Dictionary from JSON files
+with open('data_list.json', 'r') as json_file:
+    retrieved_list = json.load(json_file)
+
+with open('data_dict.json', 'r') as json_file:
+    retrieved_dict = json.load(json_file)
+
+print("\nRetrieved Python List:", retrieved_list)
+print("Retrieved Python Dictionary:", retrieved_dict)
+```
+
+**Sample Output**:
+```
+Data has been saved to JSON files.
+
+Retrieved Python List: ['apple', 'banana', 'cherry', 'date']
+Retrieved Python Dictionary: {'name': 'Alice', 'age': 30, 'city': 'New York'}
+```
