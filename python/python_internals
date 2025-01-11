@@ -21,5 +21,16 @@ import pkg_resources
 installed_packages = pkg_resources.working_set
 installed_packages_list = sorted(["%s==%s" % (i.key, i.version) for i in installed_packages])
 print(len(installed_packages_list))
+
+#get the list of attributes and methods of an object.
+import math
+import pandas
+import numpy
+print(len(dir(math)))
+print(dir(math))
+print(len(dir(pandas)))
+print(dir(pandas))
+print(len(dir(numpy)))
+print(dir(numpy))
 for package in installed_packages_list:
     print(package)
