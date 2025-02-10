@@ -1,0 +1,133 @@
+Object-Oriented Programming (OOP) is a programming paradigm that uses objects and classes. It is widely used in Python to structure and organize code in a way that makes it reusable, scalable, and easier to maintain. In OOP, you define classes and create objects from those classes.
+
+Key Concepts of OOP:
+Class: A blueprint for creating objects (a collection of attributes and methods).
+Object: An instance of a class. It holds data (attributes) and methods that operate on that data.
+Attributes: Variables that belong to the object.
+Methods: Functions that are defined inside the class and can manipulate the object’s data.
+Inheritance: When one class inherits the attributes and methods of another class.
+Polymorphism: When different classes have methods with the same name but potentially different implementations.
+Encapsulation: Hiding the internal details of the object and only exposing necessary parts.
+Abstraction: Hiding complex implementation details and showing only essential features.
+
+
+Example 1: Creating a Class and Object
+
+# Define the class
+class Car:
+    # Constructor (initialization method)
+    def __init__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        self.year = year
+    
+    # Method to display car details
+    def display_info(self):
+        return f"Car: {self.year} {self.brand} {self.model}"
+
+# Create an object (instance) of the Car class
+my_car = Car("Toyota", "Corolla", 2020)
+
+# Access the method
+print(my_car.display_info())  # Output: Car: 2020 Toyota Corolla
+
+Explanation:
+__init__ method: This is the constructor method that is called when an object is created. It initializes the object's attributes (brand, model, year).
+display_info method: This is a simple method that prints the car details.
+
+Example 2: Inheritance
+
+# Define the parent class (Car)
+class Car:
+    def __init__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        self.year = year
+
+    def display_info(self):
+        return f"Car: {self.year} {self.brand} {self.model}"
+
+# Define the child class (ElectricCar) that inherits from Car
+class ElectricCar(Car):
+    def __init__(self, brand, model, year, battery_size):
+        super().__init__(brand, model, year)  # Call the parent class constructor
+        self.battery_size = battery_size
+
+    # Overriding the display_info method
+    def display_info(self):
+        return f"{super().display_info()} - Battery Size: {self.battery_size} kWh"
+
+# Create an object of ElectricCar
+my_electric_car = ElectricCar("Tesla", "Model S", 2022, 100)
+
+# Access the method
+print(my_electric_car.display_info())  # Output: Car: 2022 Tesla Model S - Battery Size: 100 kWh
+
+Explanation:
+The ElectricCar class inherits the attributes and methods of the Car class.
+We use super().__init__() to call the constructor of the parent (Car) class, and we add an additional attribute (battery_size).
+The display_info method is overridden to provide more specific information for electric cars.
+
+Example 3: Polymorphism
+
+class Dog:
+    def speak(self):
+        return "Woof!"
+
+class Cat:
+    def speak(self):
+        return "Meow!"
+
+# Function that uses polymorphism
+def animal_sound(animal):
+    print(animal.speak())
+
+# Create objects
+dog = Dog()
+cat = Cat()
+
+# Polymorphism in action
+animal_sound(dog)  # Output: Woof!
+animal_sound(cat)  # Output: Meow!
+
+Explanation:
+Both the Dog and Cat classes have a speak method, but they return different sounds.
+The function animal_sound takes an animal object as input and calls its speak method, demonstrating polymorphism.
+
+Example 4: Encapsulation
+
+class BankAccount:
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.__balance = balance  # Private attribute
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+        else:
+            print("Deposit amount must be positive.")
+
+    def withdraw(self, amount):
+        if 0 < amount <= self.__balance:
+            self.__balance -= amount
+        else:
+            print("Insufficient funds or invalid amount.")
+
+    def get_balance(self):
+        return self.__balance
+
+# Create an account
+account = BankAccount("John", 1000)
+
+# Try to access private attribute (this will throw an error)
+# print(account.__balance)  # AttributeError
+
+# Use methods to interact with the private data
+account.deposit(500)
+account.withdraw(200)
+
+print(account.get_balance())  # Output: 1300
+
+Explanation:
+The __balance attribute is encapsulated and cannot be accessed directly from outside the class.
+You interact with it through the public methods like deposit, withdraw, and get_balance.
