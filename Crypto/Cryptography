@@ -1,1 +1,17 @@
+Hashing/Hashing Algorithms
+  Mathematical formulas that transform messages into deterministic. fixed-length representational strings
+  -> To hash a 'message/data/packet' to a 'Digest' using 'hashing algorithm'.
+    md5, sha1, SHA256, SHA3-xxx
 
+Keys/Secret Keys
+  Sequence of 1's and 0's
+  Sized in number of "bits"
+
+Symmetric Cryptography
+  Encryption
+  MAC/HMAC
+  Pseudo Random Function
+Asymmetric Cryptography
+  Asymmetric Encryption
+  Signatures
+  Key Exchanges
