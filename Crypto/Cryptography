@@ -1,5 +1,5 @@
 Hashing/Hashing Algorithms
-  Mathematical formulas that transform messages into deterministic. fixed-length representational strings
+  Mathematical formulas that transform messages into deterministic, fixed-length representational strings
   -> To hash a 'message/data/packet' to a 'Digest' using 'hashing algorithm'.
     md5, sha1, SHA256, SHA3-xxx
 
@@ -8,10 +8,19 @@ Keys/Secret Keys
   Sized in number of "bits"
 
 Symmetric Cryptography
+    Mathematical operations performed with one secret key and verified with same key.
   Encryption
+    Plain Text -> Key -> Cipher text -> Key -> Plain Text
+    AES - 128/192/256, ChaCha20
   MAC/HMAC
+    Using the secret key to hash a message and transmit the message + digest
+    HMAC,Poly1305
   Pseudo Random Function
+    Mathematical formula that transform messages into deterministic, arbitrary-lenght representational strings
+    Key Derivation Function (KDF)
+
 Asymmetric Cryptography
+    Private key and Public key
   Asymmetric Encryption
   Signatures
     RSA signatures
